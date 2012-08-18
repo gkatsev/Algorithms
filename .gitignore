@@ -1,6 +1,7 @@
 Videos/
-.idea/*
+*.idea/*
 *.iml
+out/
 
 #################
 ## Eclipse
