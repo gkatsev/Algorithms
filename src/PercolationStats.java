@@ -11,8 +11,8 @@ public class PercolationStats {
     private int T;
 
     // perform T independent computational experiments on an N-by-N grid
-    public PercolationStats (int N, int T) {
-        if (N <= 0 || T <=0) throw new IllegalArgumentException("either input was zero or below");
+    public PercolationStats(int N, int T) {
+        if (N <= 0 || T <= 0) throw new IllegalArgumentException("either input was zero or below");
         this.N = N;
         this.T = T;
 
@@ -28,16 +28,16 @@ public class PercolationStats {
             p = new Percolation(N);
 
             double t = 0;
-            while(true) {
+            while (true) {
                 int[] site = getSite();
-                if(!p.isOpen(site[0], site[1])) {
+                if (!p.isOpen(site[0], site[1])) {
                     p.open(site[0], site[1]);
                     t++;
-                    if(p.percolates()) break;
+                    if (p.percolates()) break;
                 }
 
             }
-            x[k] = t/(N*N);
+            x[k] = t / (N * N);
         }
     }
 
@@ -50,7 +50,7 @@ public class PercolationStats {
     }
 
     // sample mean of percolation threshold
-    public double mean () {
+    public double mean() {
         double mean = 0;
         for (int i = 0; i < x.length; i++) {
             mean += x[i];
@@ -59,14 +59,14 @@ public class PercolationStats {
     }
 
     // sample standard deviation of percolation threshold
-    public double stddev () {
+    public double stddev() {
         double mean = mean();
         double num = 0;
-        double denom = T -1;
+        double denom = T - 1;
         for (int i = 0; i < x.length; i++) {
-            num += Math.pow(x[i] - mean, 2);
+            num += ((x[i] - mean) * (x[i] - mean));
         }
-        return num/denom;
+        return num / denom;
     }
 
     private double[] confidenceInterval() {
@@ -81,7 +81,7 @@ public class PercolationStats {
         return ci;
     }
 
-    private void print(){
+    private void print() {
         StringBuilder sb = new StringBuilder();
 
         sb.append("mean");
@@ -105,7 +105,7 @@ public class PercolationStats {
     }
 
     // test client, described below
-    public static void main (String[] args) {
+    public static void main(String[] args) {
         int N = Integer.parseInt(args[0]);
         int T = Integer.parseInt(args[1]);
 
