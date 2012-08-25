@@ -41,7 +41,7 @@ public class Percolation {
 
         openGrid[current] = setOpen(openGrid[current]);
 
-        int[] neighbors = getNeighbors(j, current);
+        int[] neighbors = getNeighbors(i, j, current);
 
         for (int k = 0; k < neighbors.length; k++) {
             int neighbor = neighbors[k];
@@ -70,11 +70,15 @@ public class Percolation {
         }
     }
 
-    private int[] getNeighbors(int j, int current) {
+    private int[] getNeighbors(int i, int j, int current) {
         int[] neighbors = new int[4];
 
         neighbors[0] = Math.max(0, current - N);
-        neighbors[1] = Math.min(size - 1, current + N);
+        if (i < N) {
+            neighbors[1] = Math.min(size - 1, current + N);
+        } else {
+            neighbors[1] = -1;
+        }
         if (j > 1) {
             neighbors[2] = Math.max(0, current - 1);
         } else {
