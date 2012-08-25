@@ -13,7 +13,7 @@ public class Percolation {
     private int virtualTop;
     private int virtualBottom;
     private WeightedQuickUnionUF grid;
-    private boolean[] openGrid;
+    private byte[] openGrid;
 
     // create N-by-N grid, with all sites blocked
     public Percolation (int N) {
@@ -23,20 +23,14 @@ public class Percolation {
         virtualBottom = size - 1;
 
         grid = new WeightedQuickUnionUF(size);
-        openGrid = new boolean[size];
+        openGrid = new byte[size];
 
         for (int i = 0; i < size; i++) {
-            openGrid[i] = false;
+            openGrid[i] = 0;
         }
 
-//        for (int i = 1; i <= N; i++) {
-//            grid.union(i, virtualTop);
-//            openGrid[i] = true;
-//            grid.union(size - N + i - 2, virtualBottom);
-//        }
-
-        openGrid[virtualTop] = true;
-        openGrid[virtualBottom] = true;
+        openGrid[virtualTop] = setOpen(openGrid[virtualTop]);
+        openGrid[virtualBottom] = setOpen(openGrid[virtualBottom]);
     }
 
     // open site (row i, column j) if it is not already
@@ -45,7 +39,7 @@ public class Percolation {
 
         int current = xyToId(i, j);
 
-        openGrid[current] = true;
+        openGrid[current] = setBit((byte)0, 0);
 
         if (j == N && isFull(i, j)) {
             openBottom(i, j, current);
@@ -59,28 +53,31 @@ public class Percolation {
 
     private void openTop (int i, int j, int current) {
         int top = Math.max(0, current - N);
-        if (openGrid[top]) grid.union(current, top);
+        if (isOpen(top)) grid.union(current, top);
     }
 
     private void openBottom (int i, int j, int current) {
         int bottom = Math.min(size - 1, current + N);
-        if (openGrid[bottom]) grid.union(current, bottom);
+        if (isOpen(bottom)) grid.union(current, bottom);
     }
 
     private void openRight (int i, int j, int current) {
         int right = Math.max(0, current - 1);
-        if (openGrid[right]) grid.union(current, right);
+        if (isOpen(right)) grid.union(current, right);
     }
 
     private void openLeft (int i, int j, int current) {
         int left = Math.min(size, current + 1);
-        if (openGrid[left]) grid.union(current, left);
+        if (isOpen(left)) grid.union(current, left);
     }
 
     // is site (row i, column j) open?
     public boolean isOpen (int i, int j) {
         checkBounds(i, j);
-        return openGrid[xyToId(i, j)];
+        return isOpen(xyToId(i, j));
+    }
+    private boolean isOpen(int current) {
+        return 1 == getOpen(openGrid[current]);
     }
 
     private boolean isConnected (int a, int b, int x, int y) {
@@ -109,6 +106,29 @@ public class Percolation {
         if (j <= 0 || j > N) throw new IndexOutOfBoundsException("row index i out of bounds");
     }
 
+
+    private byte getBottom(byte b) {
+        return getBit(b, 1);
+    }
+    private byte setBottom(byte b) {
+        return setBit(b, 1);
+    }
+
+    private byte getOpen(byte b) {
+        return getBit(b, 0);
+    }
+    private byte setOpen(byte b) {
+        return setBit(b, 0);
+    }
+
+    private byte getBit(byte b, int n) {
+        return (byte)(b & (1 << n));
+    }
+    private byte setBit(byte b, int n) {
+        return (byte)(b | (1 << n));
+    }
+
+
     private void printGrid () {
         StdOut.println();
 
@@ -124,14 +144,14 @@ public class Percolation {
     private void printOpenGrid () {
         StdOut.println();
 
-        boolean b = openGrid[0];
+        boolean b = isOpen(0);
         if (b) {
             StdOut.println("o ");
         } else {
             StdOut.println("x ");
         }
         for (int i = 1; i < openGrid.length - 1; i++) {
-            b = openGrid[i];
+            b = isOpen(i);
             if (b) {
                 StdOut.print("o ");
             } else {
@@ -140,7 +160,7 @@ public class Percolation {
             }
             if (i % N == 0) StdOut.println();
         }
-        b = openGrid[openGrid.length - 1];
+        b = isOpen(openGrid.length - 1);
         if (b) {
             StdOut.println("o ");
         } else {
