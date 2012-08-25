@@ -66,7 +66,7 @@ public class PercolationStats {
         for (int i = 0; i < x.length; i++) {
             num += ((x[i] - mean) * (x[i] - mean));
         }
-        return num / denom;
+        return Math.sqrt(num / denom);
     }
 
     private double[] confidenceInterval() {
