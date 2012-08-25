@@ -104,7 +104,8 @@ public class Percolation {
 
     public boolean isFull(int i, int j) {
         checkBounds(i, j);
-        return grid.connected(virtualTop, xyToId(i, j));
+        int current = xyToId(i, j);
+        return isOpen(current) && grid.connected(virtualTop, current);
     }
 
     // does the system percolate?
