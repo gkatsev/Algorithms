@@ -47,14 +47,15 @@ public class Percolation {
             int neighbor = neighbors[k];
             if (neighbor != -1) openNeighbor(current, neighbor);
         }
+        int root = grid.find(current);
         if (i == N) {
             openGrid[current] = setBottom(openGrid[current]);
-            if (grid.connected(virtualTop, current)) percolates = true;
         }
         if (isConnectedToBottom(current)) {
-            int root = grid.find(current);
             openGrid[root] = setBottom(openGrid[root]);
         }
+
+        if (isConnectedToBottom(current) && isFull(i, j)) percolates = true;
     }
 
     private void openNeighbor(int current, int neighbor) {
@@ -64,7 +65,7 @@ public class Percolation {
             grid.union(current, root);
 
             if (isConnectedToBottom(root)) {
-                openGrid[neighbor] = setBottom(openGrid[neighbor]);
+                openGrid[current] = setBottom(openGrid[current]);
             }
         }
     }
@@ -112,8 +113,7 @@ public class Percolation {
     }
 
     private int xyToId(int i, int j) {
-        int rVal = (i - 1) * N + j;
-        return rVal;
+        return (i - 1) * N + j;
     }
 
     private void checkBounds(int i, int j) {
