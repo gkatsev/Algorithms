@@ -1,9 +1,7 @@
 /**
- * Created with IntelliJ IDEA.
- * User: mycroft
+ * User: Gary KAtsevman
  * Date: 8/21/12
  * Time: 10:31 PM
- * To change this template use File | Settings | File Templates.
  */
 
 public class Percolation {
@@ -39,6 +37,8 @@ public class Percolation {
 
         int current = xyToId(i, j);
 
+        if (isOpen(current)) return;
+
         openGrid[current] = setOpen(openGrid[current]);
 
         int[] neighbors = getNeighbors(j, current);
@@ -49,11 +49,11 @@ public class Percolation {
         }
         if (i == N) {
             openGrid[current] = setBottom(openGrid[current]);
-            if (isFull(i, j)) percolates = true;
         }
         if (isConnectedToBottom(current)) {
             int root = grid.find(current);
             openGrid[root] = setBottom(openGrid[root]);
+            if (grid.connected(virtualTop, current)) percolates = true;
         }
     }
 
@@ -65,6 +65,7 @@ public class Percolation {
 
             if (isConnectedToBottom(root)) {
                 openGrid[neighbor] = setBottom(openGrid[neighbor]);
+                openGrid[current] = setBottom(openGrid[current]);
             }
         }
     }
@@ -90,7 +91,7 @@ public class Percolation {
     }
 
     private boolean isConnectedToBottom (int current) {
-        return getBottom(openGrid[current]) == 1;
+        return getBottom(openGrid[current]) == 2;
     }
 
     public boolean isFull (int i, int j) {
@@ -110,7 +111,7 @@ public class Percolation {
 
     private void checkBounds (int i, int j) {
         if (i <= 0 || i > N) throw new IndexOutOfBoundsException("row index i out of bounds");
-        if (j <= 0 || j > N) throw new IndexOutOfBoundsException("row index i out of bounds");
+        if (j <= 0 || j > N) throw new IndexOutOfBoundsException("column index j out of bounds");
     }
 
     private byte getBottom (byte b) {
@@ -135,101 +136,5 @@ public class Percolation {
 
     private byte setBit (byte b, int n) {
         return (byte) (b | (1 << n));
-    }
-
-    private void printGrid () {
-        StdOut.println();
-
-        StdOut.println(grid.find(0));
-        for (int i = 1; i < openGrid.length - 1; i++) {
-            StdOut.print(grid.find(i) + "\t");
-
-            if (i % N == 0) StdOut.println();
-        }
-        StdOut.println(grid.find(openGrid.length - 1));
-    }
-
-    private void printOpenGrid () {
-        StdOut.println();
-
-        boolean b = isOpen(0);
-        if (b) {
-            StdOut.println("o ");
-        } else {
-            StdOut.println("x ");
-        }
-        for (int i = 1; i < openGrid.length - 1; i++) {
-            b = isOpen(i);
-            if (b) {
-                StdOut.print("o ");
-            } else {
-                StdOut.print("x ");
-
-            }
-            if (i % N == 0) StdOut.println();
-        }
-        b = isOpen(openGrid.length - 1);
-        if (b) {
-            StdOut.println("o ");
-        } else {
-            StdOut.println("x ");
-        }
-    }
-
-    public static void main (String[] args) {
-        Percolation p = new Percolation(5);
-        p.printGrid();
-        p.open(1, 1);
-        StdOut.println(p.isOpen(1, 1));
-        p.printGrid();
-
-        p.open(1, 2);
-        StdOut.println(p.isOpen(1, 2));
-        p.printGrid();
-
-        p.open(1, 3);
-        StdOut.println(p.isOpen(1, 3));
-        p.printGrid();
-
-        p.open(1, 4);
-        StdOut.println(p.isOpen(1, 4));
-        p.printGrid();
-
-        p.open(1, 5);
-        StdOut.println(p.isOpen(1, 5));
-        p.printGrid();
-
-        StdOut.println(p.isFull(1, 5));
-        StdOut.println(p.percolates());
-
-        p.printOpenGrid();
-        p.printGrid();
-
-        StdOut.println("\n\nTest 2");
-
-        p = new Percolation(5);
-        p.printGrid();
-        p.open(1, 1);
-        StdOut.println(p.isOpen(1, 1));
-        p.printGrid();
-
-        p.open(2, 1);
-        StdOut.println(p.isOpen(2, 1));
-        p.printGrid();
-
-        p.open(3, 1);
-        StdOut.println(p.isOpen(3, 1));
-        p.printGrid();
-
-        p.open(4, 1);
-        StdOut.println(p.isOpen(4, 1));
-        p.printGrid();
-
-        p.open(5, 1);
-        StdOut.println(p.isOpen(5, 1));
-        p.printGrid();
-
-        StdOut.println(p.isFull(5, 1));
-        StdOut.println(p.percolates());
     }
 }
