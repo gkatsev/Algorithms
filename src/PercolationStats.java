@@ -6,10 +6,9 @@
 
 public class PercolationStats {
 
-    double[] x;
-
-    int N;
-    int T;
+    private double[] x;
+    private int N;
+    private int T;
 
     // perform T independent computational experiments on an N-by-N grid
     public PercolationStats (int N, int T) {
