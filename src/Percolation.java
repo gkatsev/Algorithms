@@ -17,10 +17,10 @@ public class Percolation {
 
     // create N-by-N grid, with all sites blocked
     public Percolation (int N) {
-        this.size = N * N + 2 * N + 2;
+        this.size = N * N + 2;
         this.N = N;
         virtualTop = 0;
-        virtualBottom = N * N + 2 * N + 1;
+        virtualBottom = size - 1;
 
         grid = new WeightedQuickUnionUF(size);
         openGrid = new boolean[size];
@@ -29,12 +29,11 @@ public class Percolation {
             openGrid[i] = false;
         }
 
-        for (int i = 1; i <= N; i++) {
-            grid.union(i, virtualTop);
-            openGrid[i] = true;
-            grid.union(size - N + i - 2, virtualBottom);
-            openGrid[N * N + N + i] = true;
-        }
+//        for (int i = 1; i <= N; i++) {
+//            grid.union(i, virtualTop);
+//            openGrid[i] = true;
+//            grid.union(size - N + i - 2, virtualBottom);
+//        }
 
         openGrid[virtualTop] = true;
         openGrid[virtualBottom] = true;
@@ -101,7 +100,7 @@ public class Percolation {
     }
 
     private int xyToId (int i, int j) {
-        int rVal = i * N + j;
+        int rVal = (i - 1) * N + j;
         return rVal;
     }
 
