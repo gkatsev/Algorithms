@@ -93,4 +93,79 @@ public class RandomizedQueue<Item> implements Iterable<Item> {
             throw new UnsupportedOperationException("We do not support the remove operation");
         }
     }
+
+    public static void main(String[] args) {
+
+        int[] arr1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        int[] freq = new int[arr1.length];
+
+
+        RandomizedQueue<Integer> aQueueObj = new RandomizedQueue<Integer>();
+
+        // Stress Test (Insert 10 element 1 by 1 and then take Number of Elements existing x 1 million samples. Every Element should appear roughly 1 Million times
+
+        System.out.println("\n******************* Now Inserting Elements 1 by 1 ");
+        System.out.println("All non-zero values should be close to 1000000. The single number will be length of the Array. It'll always be " + freq.length + " \n");
+        for (int element : arr1) {
+            aQueueObj.enqueue(element);
+            for (int k = 0 ; k < freq.length; ++k){
+                freq[k] = 0;
+            }
+            for (int j = 0; j < aQueueObj.size() * 1000000; ++j) {
+                freq[aQueueObj.sample()-1]++;
+            }
+            StdArrayIO.print(freq);
+
+        }
+
+        System.out.print("Checking for size = 10 : " );
+        if (!aQueueObj.isEmpty() && aQueueObj.size() == 10)
+            System.out.println("Assertion Passed");
+        else
+            System.out.println("Assertion Failed");
+
+        // Stress Test (Delete 10 elements 1 by 1 and then take Number of Elements remaining x 1 million samples. Every Remaining Element should appear roughly 1 Million times
+
+        System.out.println("\n******************* Now Removing Elements 1 by 1 ");
+        System.out.println("All non-zero values should be close to 1000000  The single  number will length of Array. It'll always be " + freq.length + " \n");
+        for (int element : arr1) {
+            aQueueObj.dequeue();
+            for (int k = 0 ; k < freq.length; ++k){
+                freq[k] = 0;
+            }
+            for (int j = 0; j < aQueueObj.size() * 1000000; ++j) {
+                freq[aQueueObj.sample()-1]++;
+            }
+            StdArrayIO.print(freq);
+        }
+
+        System.out.println("\n******************* Now Checking for various assertions");
+
+        System.out.print("Checking for empty List : ");
+        if (aQueueObj.isEmpty() && aQueueObj.size() == 0)
+            System.out.println("Assertion Passed");
+        else
+            System.out.println("Assertion Failed");
+
+        try {
+            System.out.print("Checking for dequeue on an empty list : ");
+            aQueueObj.dequeue();
+            System.out.println("Assertion Failed. Dequeue on Empty list allowed!");
+        } catch (java.util.NoSuchElementException ex) {
+            System.out.println("Assertion Passed");
+        } catch (Exception ex) {
+            System.out.println("Assertion Failed, Incorrect Exception Object Support Found");
+        }
+
+        try {
+            System.out.print("Checking for Enqueing a null Item : ");
+            aQueueObj.enqueue(null);
+            System.out.println("Assertion Failed. Enqueing an Null Element Succeded!");
+        } catch (java.lang.NullPointerException ex) {
+            System.out.println("Assertion Passed");
+        } catch (Exception ex) {
+            System.out.println("Assertion Failed. Incorrect Exception Object Support Found.");
+        }
+
+    }
 }
