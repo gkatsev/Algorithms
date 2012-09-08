@@ -8,6 +8,33 @@ public class PointTester {
             prev = true;
         }
     }
+    private void assertZero(double actual) {
+        double expected = 0;
+        if (expected == actual) { StdOut.print("."); prev = false; }
+        else {
+            if (!prev) { StdOut.print("\n"); }
+            StdOut.println("Expected " + expected + ", was " + actual);
+            prev = true;
+        }
+    }
+    private void assertPositive(double actual) {
+        double expected = 0;
+        if (expected < actual) { StdOut.print("."); prev = false; }
+        else {
+            if (!prev) { StdOut.print("\n"); }
+            StdOut.println("Expected positive, was " + actual);
+            prev = true;
+        }
+    }
+    private void assertNegative(double actual) {
+        double expected = 0;
+        if (expected > actual) { StdOut.print("."); prev = false; }
+        else {
+            if (!prev) { StdOut.print("\n"); }
+            StdOut.println("Expected negative, was " + actual);
+            prev = true;
+        }
+    }
 
     public void testCompareTo() {
         // Equal
@@ -36,18 +63,18 @@ public class PointTester {
         assertEquals(6.0, (new Point(1, 1)).slopeTo(new Point(5, 25)));
     }
 
-//    public void testSlopeOrderComparator() {
-//        Point originPoint = new Point(1, 1);
-//
-//        // Same slope (straight line)
-//        assertEquals(0, originPoint.SLOPE_ORDER.compare(new Point(2, 2), new Point(5, 5)));
-//
-//        // First slope is smaller
-//        assertEquals(-1, originPoint.SLOPE_ORDER.compare(new Point(5, 10), new Point(5, 25)));
-//
-//        // Second slope is smaller
-//        assertEquals(+1, originPoint.SLOPE_ORDER.compare(new Point(5, 25), new Point(5, 10)));
-//    }
+    public void testSlopeOrderComparator() {
+        Point originPoint = new Point(1, 1);
+
+        // Same slope (straight line)
+        assertZero(originPoint.SLOPE_ORDER.compare(new Point(2, 2), new Point(5, 5)));
+
+        // First slope is smaller
+        assertNegative(originPoint.SLOPE_ORDER.compare(new Point(5, 10), new Point(5, 25)));
+
+        // Second slope is smaller
+        assertPositive(originPoint.SLOPE_ORDER.compare(new Point(5, 25), new Point(5, 10)));
+    }
 
     public static void main(String[] args) {
         PointTester pt = new PointTester();
@@ -55,5 +82,7 @@ public class PointTester {
         pt.testCompareTo();
         StdOut.println("\nTest slopeTo");
         pt.testSlopeTo();
+        StdOut.println("\nTest comparator");
+        pt.testSlopeOrderComparator();
     }
 }

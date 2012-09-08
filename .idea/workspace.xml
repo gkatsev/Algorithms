@@ -4,6 +4,7 @@
     <list default="true" id="98ee63cc-989f-4ce9-a71a-ced83c764918" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Point.java" afterPath="$PROJECT_DIR$/src/Point.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PointTester.java" afterPath="$PROJECT_DIR$/src/PointTester.java" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -84,8 +85,12 @@
       <file leaf-file-name="Point.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Point.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="2" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.52246255">
-              <folding />
+            <state line="23" column="0" selection-start="705" selection-end="705" vertical-scroll-proportion="0.2431243">
+              <folding>
+                <element signature="e#483#749#0" expanded="true" />
+                <element signature="e#497#504#0" expanded="true" />
+                <element signature="e#742#743#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -93,7 +98,7 @@
       <file leaf-file-name="PointTester.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PointTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="63" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0">
+            <state line="75" column="22" selection-start="2855" selection-end="2855" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -102,7 +107,7 @@
       <file leaf-file-name="Brute.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Brute.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="20" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.0">
+            <state line="90" column="0" selection-start="2772" selection-end="2772" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -145,8 +150,8 @@
         <option value="$PROJECT_DIR$/src/PercolationStats.java" />
         <option value="$PROJECT_DIR$/src/Percolation.java" />
         <option value="$PROJECT_DIR$/src/TimingExercise.java" />
-        <option value="$PROJECT_DIR$/src/PointTester.java" />
         <option value="$PROJECT_DIR$/src/Brute.java" />
+        <option value="$PROJECT_DIR$/src/PointTester.java" />
         <option value="$PROJECT_DIR$/src/Point.java" />
       </list>
     </option>
@@ -202,14 +207,14 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewLibrariesNode" />
             </PATH_ELEMENT>
           </PATH>
-        </subPane>
-      </pane>
-      <pane id="Scope">
-        <subPane subId="Project Files">
           <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Algorithms" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -244,6 +249,16 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <PATH>
+            <PATH_ELEMENT USER_OBJECT="Root">
+              <option name="myItemId" value="" />
+              <option name="myItemType" value="" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
@@ -291,10 +306,10 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="Brute" type="Application" factoryName="Application" temporary="true">
+    <configuration default="false" name="Brute" type="Application" factoryName="Application" editBeforeRun="true" temporary="true">
       <option name="MAIN_CLASS_NAME" value="Brute" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="input56.txt" />
+      <option name="PROGRAM_PARAMETERS" value="rs1423.txt" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/src/collinear" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -545,7 +560,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946378" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39911553" sideWeight="0.6712329" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15201768" sideWeight="0.67094016" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32905984" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -638,22 +653,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Brute.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="20" selection-start="1567" selection-end="1567" vertical-scroll-proportion="0.0">
+        <state line="90" column="0" selection-start="2772" selection-end="2772" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PointTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="63" selection-start="1173" selection-end="1173" vertical-scroll-proportion="0.0">
+        <state line="75" column="22" selection-start="2855" selection-end="2855" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Point.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="2" selection-start="1366" selection-end="1366" vertical-scroll-proportion="0.52246255">
-          <folding />
+        <state line="23" column="0" selection-start="705" selection-end="705" vertical-scroll-proportion="0.2431243">
+          <folding>
+            <element signature="e#483#749#0" expanded="true" />
+            <element signature="e#497#504#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
