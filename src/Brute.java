@@ -23,8 +23,28 @@ public class Brute {
         StdOut.println();
     }
 
+    private static Point findLeast(Point[] points) {
+        Point p = points[0];
+        Point t;
+        for (int i = 1; i < points.length; i++) {
+            t = points[i];
+           if (p.compareTo(t) < 0) { p = t; }
+        }
+        return p;
+    }
+    private static Point findMost(Point[] points) {
+        Point p = points[0];
+        Point t;
+        for (int i = 1; i < points.length; i++) {
+            t = points[i];
+            if (p.compareTo(t) > 0) { p = t; }
+        }
+        return p;
+    }
+
     private static void drawPoints(Point a, Point b, Point c, Point d) {
-        a.drawTo(d);
+        Point[] points = new Point[] {a, b, c, d};
+        findLeast(points).drawTo(findMost((points)));
     }
 
     private static void iterate(Point[] points) {
@@ -32,13 +52,13 @@ public class Brute {
         for (int i = 0; i < n; i++) {
             Point a = points[i];
             a.draw();
-            for (int j = 0; j < n; j++) {
+            for (int j = i + 1; j < n; j++) {
                 Point b = points[j];
                 b.draw();
-                for (int k = 0; k < n; k++) {
+                for (int k = j + 1; k < n; k++) {
                     Point c = points[k];
                     c.draw();
-                    for (int l = 0; l < n; l++) {
+                    for (int l = k + 1; l < n; l++) {
                         Point d = points[l];
                         d.draw();
                         if (collinear(a, b, c)) {
