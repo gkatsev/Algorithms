@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="98ee63cc-989f-4ce9-a71a-ced83c764918" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Point.java" afterPath="$PROJECT_DIR$/src/Point.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PointTester.java" afterPath="$PROJECT_DIR$/src/PointTester.java" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
@@ -303,7 +302,7 @@
       <recent name="F:\Documents\GitHub\Algorithms\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Fast">
+  <component name="RunManager" selected="Application.PointTester">
     <configuration default="false" name="PointPlotter" type="Application" factoryName="Application" editBeforeRun="true" temporary="true">
       <option name="MAIN_CLASS_NAME" value="PointPlotter" />
       <option name="VM_PARAMETERS" value="" />
