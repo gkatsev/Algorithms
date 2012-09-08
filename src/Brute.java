@@ -49,18 +49,19 @@ public class Brute {
 
     private static void iterate(Point[] points) {
         int n = points.length;
+        boolean first = true;
         for (int i = 0; i < n; i++) {
             Point a = points[i];
-            a.draw();
+            if (first) { a.draw(); }
             for (int j = i + 1; j < n; j++) {
                 Point b = points[j];
-                b.draw();
+                if (first) { b.draw(); }
                 for (int k = j + 1; k < n; k++) {
                     Point c = points[k];
-                    c.draw();
+                    if (first) { c.draw(); }
                     for (int l = k + 1; l < n; l++) {
                         Point d = points[l];
-                        d.draw();
+                        if (first) { d.draw(); first = false; }
                         if (collinear(a, b, c)) {
                             if (collinear(b, c, d)) {
                                 printPoints(a, b, c, d);
@@ -87,5 +88,6 @@ public class Brute {
         }
 
         iterate(points);
+        StdOut.println("done");
     }
 }
