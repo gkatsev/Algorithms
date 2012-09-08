@@ -66,6 +66,9 @@ public class PointTester {
     public void testSlopeOrderComparator() {
         Point originPoint = new Point(1, 1);
 
+        // same point
+        assertZero(originPoint.SLOPE_ORDER.compare(new Point(1, 1), new Point(1, 1)));
+
         // Same slope (straight line)
         assertZero(originPoint.SLOPE_ORDER.compare(new Point(2, 2), new Point(5, 5)));
 
@@ -74,6 +77,24 @@ public class PointTester {
 
         // Second slope is smaller
         assertPositive(originPoint.SLOPE_ORDER.compare(new Point(5, 25), new Point(5, 10)));
+
+        // first slope is horizontal
+        assertNegative(originPoint.SLOPE_ORDER.compare(new Point(5, 1), new Point(5, 5)));
+
+        // second slope is horizontal
+        assertPositive(originPoint.SLOPE_ORDER.compare(new Point(5, 5), new Point(5, 1)));
+
+        // first slope is vertical
+        assertPositive(originPoint.SLOPE_ORDER.compare(new Point(1, 5), new Point(5, 5)));
+
+        // second slope is vertical
+        assertNegative(originPoint.SLOPE_ORDER.compare(new Point(5, 5), new Point(1, 5)));
+
+        // both slopes vertical
+        assertZero(originPoint.SLOPE_ORDER.compare(new Point(1, 5), new Point(1, 8)));
+
+        // both slopes is horizontal
+        assertZero(originPoint.SLOPE_ORDER.compare(new Point(5, 1), new Point(8, 1)));
     }
 
     public static void main(String[] args) {
