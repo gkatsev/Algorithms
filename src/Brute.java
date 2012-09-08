@@ -88,6 +88,5 @@ public class Brute {
         }
 
         iterate(points);
-        StdOut.println("done");
     }
 }
