@@ -31,15 +31,15 @@ public class Brute {
         int n = points.length;
         for (int i = 0; i < n; i++) {
             Point a = points[i];
+            a.draw();
             for (int j = 0; j < n; j++) {
                 Point b = points[j];
+                b.draw();
                 for (int k = 0; k < n; k++) {
                     Point c = points[k];
+                    c.draw();
                     for (int l = 0; l < n; l++) {
                         Point d = points[l];
-                        a.draw();
-                        b.draw();
-                        c.draw();
                         d.draw();
                         if (collinear(a, b, c)) {
                             if (collinear(b, c, d)) {
@@ -53,6 +53,9 @@ public class Brute {
         }
     }
     public static void main(String[] args) {
+        StdDraw.setXscale(0, 32768);
+        StdDraw.setYscale(0, 32768);
+
         String filename = args[0];
         In in = new In(filename);
         int N = in.readInt();

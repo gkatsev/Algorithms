@@ -3,6 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="98ee63cc-989f-4ce9-a71a-ced83c764918" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Brute.java" afterPath="$PROJECT_DIR$/src/Brute.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Point.java" afterPath="$PROJECT_DIR$/src/Point.java" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,19 +82,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Point.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Point.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Point.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="26" selection-start="1237" selection-end="1237" vertical-scroll-proportion="0.6171617">
+            <state line="60" column="18" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Brute.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="PointTester.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PointTester.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="16" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Brute.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Brute.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="32" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
+            <state line="41" column="43" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.32673267">
               <folding />
             </state>
           </provider>
@@ -135,6 +146,7 @@
         <option value="$PROJECT_DIR$/src/PercolationStats.java" />
         <option value="$PROJECT_DIR$/src/Percolation.java" />
         <option value="$PROJECT_DIR$/src/TimingExercise.java" />
+        <option value="$PROJECT_DIR$/src/PointTester.java" />
         <option value="$PROJECT_DIR$/src/Point.java" />
         <option value="$PROJECT_DIR$/src/Brute.java" />
       </list>
@@ -263,7 +275,7 @@
       <recent name="F:\Documents\GitHub\Algorithms\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Brute">
+  <component name="RunManager" selected="Application.PointTester">
     <configuration default="false" name="PointPlotter" type="Application" factoryName="Application" editBeforeRun="true" temporary="true">
       <option name="MAIN_CLASS_NAME" value="PointPlotter" />
       <option name="VM_PARAMETERS" value="" />
@@ -287,6 +299,22 @@
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/src/collinear" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Algorithms" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="PointTester" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="PointTester" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -433,9 +461,10 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.PointPlotter" />
       <item index="1" class="java.lang.String" itemvalue="Application.Brute" />
+      <item index="2" class="java.lang.String" itemvalue="Application.PointTester" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -610,16 +639,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Brute.java">
+    <entry file="file://$PROJECT_DIR$/src/PointTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="32" selection-start="975" selection-end="975" vertical-scroll-proportion="0.0">
+        <state line="30" column="16" selection-start="1195" selection-end="1195" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Point.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="26" selection-start="1237" selection-end="1237" vertical-scroll-proportion="0.6171617">
+        <state line="60" column="18" selection-start="1767" selection-end="1767" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Brute.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="43" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.32673267">
           <folding />
         </state>
       </provider>
