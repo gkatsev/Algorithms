@@ -20,8 +20,9 @@ public class Point implements Comparable<Point> {
         public int compare(Point a, Point b) {
             double sTA = Point.this.slopeTo(a);
             double sTB = Point.this.slopeTo(b);
-            double ds = sTA - sTB;
-            return (int) ds;
+            if (sTA < sTB) { return -1; }
+            else if (sTA > sTB) { return 1; }
+            else { return 0; }
         }
     };
 
@@ -48,6 +49,9 @@ public class Point implements Comparable<Point> {
     }
 
     // slope between this point and that point
+    // horizontal  0
+    // vertical    Double.POSITIVE_INFINITY
+    // degenerate  Double.NEGATIVE_INFINITY
     public double slopeTo(Point that) {
         double dx = that.x - this.x;
         double dy = that.y - this.y;
@@ -55,6 +59,8 @@ public class Point implements Comparable<Point> {
             return Double.NEGATIVE_INFINITY;
         } else if (dx == 0) {
             return Double.POSITIVE_INFINITY;
+        } else if (dy == 0) {
+            return +0;
         }
         return dy/dx;
     }

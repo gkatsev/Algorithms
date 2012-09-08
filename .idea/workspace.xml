@@ -82,24 +82,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Point.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Point.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Point.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="0" selection-start="705" selection-end="705" vertical-scroll-proportion="0.2431243">
+            <state line="42" column="4" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#483#749#0" expanded="true" />
+                <element signature="e#483#804#0" expanded="true" />
                 <element signature="e#497#504#0" expanded="true" />
-                <element signature="e#742#743#0" expanded="true" />
+                <element signature="e#797#798#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PointTester.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PointTester.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="75" column="22" selection-start="2855" selection-end="2855" vertical-scroll-proportion="0.0">
-              <folding />
             </state>
           </provider>
         </entry>
@@ -107,8 +98,21 @@
       <file leaf-file-name="Brute.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Brute.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="90" column="0" selection-start="2772" selection-end="2772" vertical-scroll-proportion="0.0">
+            <state line="35" column="27" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Fast.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Fast.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="19" column="0" selection-start="540" selection-end="540" vertical-scroll-proportion="0.4831261">
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#findLeast#0;class#Fast#0" expanded="false" />
+                <element signature="method#findMost#0;class#Fast#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,6 +121,15 @@
         <entry file="file://$PROJECT_DIR$/src/PointPlotter.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PointTester.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PointTester.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="62" column="24" selection-start="2398" selection-end="2398" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -153,6 +166,7 @@
         <option value="$PROJECT_DIR$/src/Brute.java" />
         <option value="$PROJECT_DIR$/src/PointTester.java" />
         <option value="$PROJECT_DIR$/src/Point.java" />
+        <option value="$PROJECT_DIR$/src/Fast.java" />
       </list>
     </option>
   </component>
@@ -289,7 +303,7 @@
       <recent name="F:\Documents\GitHub\Algorithms\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.PointTester">
+  <component name="RunManager" selected="Application.Fast">
     <configuration default="false" name="PointPlotter" type="Application" factoryName="Application" editBeforeRun="true" temporary="true">
       <option name="MAIN_CLASS_NAME" value="PointPlotter" />
       <option name="VM_PARAMETERS" value="" />
@@ -324,11 +338,11 @@
     </configuration>
     <configuration default="false" name="PointTester" type="Application" factoryName="Application" temporary="true">
       <option name="MAIN_CLASS_NAME" value="PointTester" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -475,10 +489,27 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
-    <list size="3">
+    <configuration default="false" name="Fast" type="Application" factoryName="Application" editBeforeRun="true">
+      <option name="MAIN_CLASS_NAME" value="Fast" />
+      <option name="VM_PARAMETERS" value="" />
+      <option name="PROGRAM_PARAMETERS" value="input8.txt" />
+      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/src/collinear" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" value="" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Algorithms" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.PointPlotter" />
       <item index="1" class="java.lang.String" itemvalue="Application.Brute" />
       <item index="2" class="java.lang.String" itemvalue="Application.PointTester" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Fast" />
     </list>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
@@ -559,8 +590,8 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946378" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39911553" sideWeight="0.6712329" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15201768" sideWeight="0.67094016" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15201768" sideWeight="0.6303419" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3696581" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -651,27 +682,38 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Brute.java">
+    <entry file="file://$PROJECT_DIR$/src/PointTester.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="90" column="0" selection-start="2772" selection-end="2772" vertical-scroll-proportion="0.0">
+        <state line="62" column="24" selection-start="2398" selection-end="2398" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PointTester.java">
+    <entry file="file://$PROJECT_DIR$/src/Brute.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="75" column="22" selection-start="2855" selection-end="2855" vertical-scroll-proportion="0.0">
+        <state line="35" column="27" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Point.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="705" selection-end="705" vertical-scroll-proportion="0.2431243">
+        <state line="42" column="4" selection-start="1216" selection-end="1216" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#483#749#0" expanded="true" />
+            <element signature="e#483#804#0" expanded="true" />
             <element signature="e#497#504#0" expanded="true" />
-            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#797#798#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Fast.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="540" selection-end="540" vertical-scroll-proportion="0.4831261">
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#findLeast#0;class#Fast#0" expanded="false" />
+            <element signature="method#findMost#0;class#Fast#0" expanded="false" />
           </folding>
         </state>
       </provider>
