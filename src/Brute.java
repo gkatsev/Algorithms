@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 /**
  * User: Gary Katsevman
  * Date: 9/8/12
@@ -13,13 +15,13 @@ public class Brute {
     }
 
     private static void printPoints(Point a, Point b, Point c, Point d) {
-        StdOut.print(a.toString());
-        StdOut.print(" -> ");
-        StdOut.print(b.toString());
-        StdOut.print(" -> ");
-        StdOut.print(c.toString());
-        StdOut.print(" -> ");
-        StdOut.print(d.toString());
+        Point[] points = new Point[] {a, b, c, d};
+        Arrays.sort(points);
+        for (int i = 0; i < points.length - 1; i++) {
+            StdOut.print(points[i].toString());
+            StdOut.print(" -> ");
+        }
+        StdOut.print(points[points.length - 1].toString());
         StdOut.println();
     }
 
