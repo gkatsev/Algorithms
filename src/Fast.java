@@ -1,5 +1,3 @@
-import java.awt.event.HierarchyBoundsAdapter;
-import java.text.DecimalFormat;
 import java.util.Arrays;
 
 /**
@@ -8,16 +6,6 @@ import java.util.Arrays;
  * Time: 5:58 PM
  */
 public class Fast {
-
-
-    private static void printSlopes(Point p, Point[] points, int lo, int hi) {
-        DecimalFormat dc = new DecimalFormat("0.00");
-        for (int i = lo; i < hi; i++) {
-            StdOut.print(dc.format(p.slopeTo(points[i])) + " ");
-        }
-        StdOut.println("\n");
-    }
-
     private static Point findLeast(Point po, Point[] points, int lo, int hi) {
         Point p = po;
         Point t;
@@ -82,12 +70,12 @@ public class Fast {
             if (tempSlope == slope) {
                 segHi++;
                 if (i + 1 == hi - 1) {
-                    if ( (segHi - segLo) >= 2) {
+                    if ((segHi - segLo) >= 2) {
                         doStuff(p, points, segLo, segHi);
                     }
                 }
             } else {
-                if ( (segHi - segLo) >= 2) {
+                if ((segHi - segLo) >= 2) {
                     doStuff(p, points, segLo, segHi);
                 }
                 segLo = ++segHi;

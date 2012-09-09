@@ -63,7 +63,10 @@ public class Brute {
                     if (first) { c.draw(); }
                     for (int l = k + 1; l < n; l++) {
                         Point d = points[l];
-                        if (first) { d.draw(); first = false; }
+                        if (first) {
+                            d.draw();
+                            first = false;
+                        }
                         if (collinear(a, b, c)) {
                             if (collinear(b, c, d)) {
                                 printPoints(a, b, c, d);
