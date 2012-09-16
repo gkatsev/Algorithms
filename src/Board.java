@@ -36,9 +36,26 @@ public class Board {
         return val;
     }
 
+    private int mod(int x, int n) {
+        return ((x % n) + n) % n;
+    }
+
     // sum of Manhattan distances between blocks and goal
     public int manhattan() {
-        return 0;
+        int val = 0;
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                int tile = tiles[i][j];
+                int pos = N * i + j + 1;
+                if (tile != 0 && tile != pos) {
+                    int xi = mod(tile, N) - 1;
+                    int xj = mod(xi, N);
+                    val += Math.abs(xi - i);
+                    val += Math.abs(xj - j);
+                }
+            }
+        }
+        return val;
     }
 
     // is this board the goal board?
@@ -72,5 +89,21 @@ public class Board {
             s.append("\n");
         }
         return s.toString();
+    }
+
+
+    public static void main(String[] args) {
+        int[][] board = new int[][]{ {1,2,3}, {4,5,6}, {7,8,0}};
+        Board b = new Board(board);
+        printTest(b);
+        board = new int[][]{ {8,1,3}, {4,0,2}, {7,6,5}};
+        b = new Board(board);
+        printTest(b);
+    }
+
+    private static void printTest(Board b) {
+        StdOut.println(b.hamming());
+        StdOut.println(b.manhattan());
+        StdOut.println(b.isGoal());
     }
 }
