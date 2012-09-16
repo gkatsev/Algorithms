@@ -1,4 +1,3 @@
-import java.util.*;
 import java.util.Stack;
 
 /**
@@ -9,16 +8,12 @@ import java.util.Stack;
 public class Solver {
     private Board initial;
     private Board twin;
-    private boolean isSolvable;
-    private int moves;
-    private Stack<Board> solution;
+    private SearchNode solution;
 
     // find a solution to the initial board (using the A* algorithm)
     public Solver(Board initial) {
         this.initial = initial;
         this.twin = initial.twin();
-        this.isSolvable = false;
-        this.moves = 0;
     }
 
     private void solve() {
@@ -27,16 +22,22 @@ public class Solver {
 
     // is the initial board solvable?
     public boolean isSolvable() {
-        return isSolvable;
+        return solution != null;
     }
 
     // min number of moves to solve initial board; -1 if no solution
     public int moves() {
-        return moves;
+        return solution == null ? -1 : solution.moves;
     }
 
     // sequence of boards in a shortest solution; null if no solution
     public Iterable<Board> solution() {
+        SearchNode node = solution;
+        Stack<Board> solution = new Stack<Board>();
+        while (node.previous != null) {
+            solution.add(0, node.board);
+            node = node.previous;
+        }
         return solution;
     }
 
@@ -63,6 +64,18 @@ public class Solver {
             for (Board board : solver.solution()) {
                 StdOut.println(board);
             }
+        }
+    }
+
+    private class SearchNode {
+        int moves;
+        Board board;
+        SearchNode previous;
+
+        public SearchNode(int moves, Board board, SearchNode previous) {
+            this.moves = moves;
+            this.board = board;
+            this.previous = previous;
         }
     }
 }

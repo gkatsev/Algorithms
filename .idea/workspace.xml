@@ -105,9 +105,9 @@
       <file leaf-file-name="Solver.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="22" selection-start="908" selection-end="908" vertical-scroll-proportion="0.6072607">
+            <state line="16" column="0" selection-start="371" selection-end="371" vertical-scroll-proportion="0.29922992">
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#868#875#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -603,9 +603,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Solver.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="22" selection-start="908" selection-end="908" vertical-scroll-proportion="0.6072607">
+        <state line="16" column="0" selection-start="371" selection-end="371" vertical-scroll-proportion="0.29922992">
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#868#875#0" expanded="true" />
           </folding>
         </state>
       </provider>
