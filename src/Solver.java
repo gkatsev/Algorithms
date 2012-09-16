@@ -9,15 +9,48 @@ public class Solver {
     private Board initial;
     private Board twin;
     private SearchNode solution;
+    MinPQ<SearchNode> minNodes;
+    MinPQ<SearchNode> minTwins;
 
     // find a solution to the initial board (using the A* algorithm)
     public Solver(Board initial) {
         this.initial = initial;
         this.twin = initial.twin();
+        solve();
     }
 
     private void solve() {
+        SearchNode node = new SearchNode(0, initial, null);
+        SearchNode twin = new SearchNode(0, this.twin, null);
+        minNodes = new MinPQ<SearchNode>();
+        minTwins = new MinPQ<SearchNode>();
+        minNodes.insert(node);
+        minTwins.insert(twin);
+        while (true) {
+            if (iterate(false)) break;
+            if (iterate(true)) break;
+        }
 
+    }
+
+    private boolean iterate(boolean twins) {
+        MinPQ<SearchNode> nodes = twins ? minTwins : minNodes;
+        SearchNode node;
+        node = nodes.delMin();
+        if (node.board.isGoal()) {
+            if (!twins) {
+                solution = node;
+            }
+            return true;
+        } else {
+            Iterable<Board> neighbors = node.board.neighbors();
+            for (Board b : neighbors) {
+                if (node.previous != null && !b.equals(node.previous.board)) {
+                   nodes.insert(new SearchNode(node.moves + 1, b, node));
+                }
+            }
+        }
+        return false;
     }
 
     // is the initial board solvable?
@@ -67,7 +100,7 @@ public class Solver {
         }
     }
 
-    private class SearchNode {
+    private class SearchNode implements Comparable<SearchNode> {
         int moves;
         Board board;
         SearchNode previous;
@@ -76,6 +109,11 @@ public class Solver {
             this.moves = moves;
             this.board = board;
             this.previous = previous;
+        }
+
+        @Override
+        public int compareTo(SearchNode that) {
+            return this.board.manhattan() - that.board.manhattan();
         }
     }
 }
