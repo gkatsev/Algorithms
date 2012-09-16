@@ -14,7 +14,7 @@ public class Board {
     // construct a board from an N-by-N array of blocks
     // (where blocks[i][j] = block in row i, column j)
     public Board(int[][] blocks) {
-        tiles = blocks;
+        tiles = copyArray(blocks);
         N = blocks.length;
     }
 
@@ -103,9 +103,81 @@ public class Board {
         return Arrays.deepEquals(tiles, that.tiles);
     }
 
+    private int[][] copyArray(int[][] arr) {
+        int iN = arr.length;
+        int jN = arr[0].length;
+        int[][] newArr = new int[iN][jN];
+        for (int i = 0; i < iN; i++) {
+            for (int j = 0; j < jN; j++) {
+                newArr[i][j] = arr[i][j];
+            }
+        }
+        return newArr;
+    }
+    private int[] findZero() {
+        for (int i = 0; i < N; i++) {
+            for(int j = 0; j < N; j++) {
+                if (tiles[i][j] == 0) {
+                    return new int[] {i, j};
+                }
+            }
+        }
+        return null;
+    }
+
+    private void exch(int[][] arr, int zi, int zj, int oi, int oj) {
+        int temp = tiles[zi][zj];
+        arr[zi][zj] = arr[oi][oj];
+        arr[oi][oj] = temp;
+    }
+
     // all neighboring boards
     public Iterable<Board> neighbors() {
-        return new Stack<Board>();
+        Stack<Board> neighbors = new Stack<Board>();
+        int[][] tilesClone = copyArray(tiles);
+        int[] zeroPos = findZero();
+        int zi = zeroPos[0];
+        int zj = zeroPos[1];
+        int oi;
+        int oj;
+
+        // up
+        oi = zi - 1;
+        oj = zj;
+        if (oi >= 0) {
+            exch(tilesClone, zi, zj, oi, oj);
+            neighbors.push(new Board(tilesClone));
+            exch(tilesClone, oi, oj, zi, zj);
+        }
+
+        // down
+        oi = zi + 1;
+        oj = zj;
+        if (oi < 3) {
+            exch(tilesClone, zi, zj, oi, oj);
+            neighbors.push(new Board(tilesClone));
+            exch(tilesClone, oi, oj, zi, zj);
+        }
+
+        // left
+        oi = zi;
+        oj = zj - 1;
+        if (oj >= 0) {
+            exch(tilesClone, zi, zj, oi, oj);
+            neighbors.push(new Board(tilesClone));
+            exch(tilesClone, oi, oj, zi, zj);
+        }
+
+        // right
+        oi = zi;
+        oj = zj + 1;
+        if (oj < 3) {
+            exch(tilesClone, zi, zj, oi, oj);
+            neighbors.push(new Board(tilesClone));
+            exch(tilesClone, oi, oj, zi, zj);
+        }
+
+        return neighbors;
     }
 
     // string representation of the board (in the output format specified below)
@@ -149,6 +221,15 @@ public class Board {
         board = new int[][]{ {8,1,3}, {4,0,2}, {7,6,5}};
         bb = new Board(board);
         StdOut.println(!b.equals(bb));
+
+
+        board = new int[][]{ {1,2,3}, {4,0,6}, {7,8,5}};
+        b = new Board(board);
+        Iterable<Board> neighbors = b.neighbors();
+        StdOut.println(b.toString());
+        for (Board bbb : neighbors) {
+            StdOut.println(bbb.toString());
+        }
     }
 
     private static void printTest(Board b) {
