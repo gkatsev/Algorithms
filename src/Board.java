@@ -8,6 +8,7 @@ import java.util.Stack;
 public class Board {
     private int N;
     private int[][] tiles;
+    private Board twin;
 
     // construct a board from an N-by-N array of blocks
     // (where blocks[i][j] = block in row i, column j)
@@ -65,7 +66,31 @@ public class Board {
 
     // a board obtained by exchanging two adjacent blocks in the same row
     public Board twin() {
-        return this;
+        if (twin == null) {
+            int[][] twinTiles = tiles.clone();
+            int i = 0;
+            int j1 = 0;
+            int j2 = 1;
+            boolean switched = false;
+            while(!switched) {
+                if(twinTiles[i][j1] == 0 || twinTiles[i][j2] == 0) {
+                    j1++;
+                    j2++;
+                    if (j2 == 3) {
+                        i++;
+                        j1 = 0;
+                        j2 = 1;
+                    }
+                } else {
+                    switched = true;
+                    int temp = twinTiles[i][j1];
+                    twinTiles[i][j1] = twinTiles[i][j2];
+                    twinTiles[i][j2] = temp;
+                }
+            }
+            twin = new Board(twinTiles);
+        }
+        return twin;
     }
 
     // does this board equal y?
@@ -96,7 +121,20 @@ public class Board {
         int[][] board = new int[][]{ {1,2,3}, {4,5,6}, {7,8,0}};
         Board b = new Board(board);
         printTest(b);
+
         board = new int[][]{ {8,1,3}, {4,0,2}, {7,6,5}};
+        b = new Board(board);
+        printTest(b);
+
+        board = new int[][]{ {0,1,3}, {4,8,2}, {7,6,5}};
+        // hamming 5
+        // manhattan 8
+        b = new Board(board);
+        printTest(b);
+
+        board = new int[][]{ {8,0,3}, {4,1,2}, {7,6,5}};
+        // hamming 5
+        // manhattan 11
         b = new Board(board);
         printTest(b);
     }
@@ -105,5 +143,7 @@ public class Board {
         StdOut.println(b.hamming());
         StdOut.println(b.manhattan());
         StdOut.println(b.isGoal());
+        StdOut.println(b.toString());
+        StdOut.println(b.twin().toString());
     }
 }
