@@ -1,3 +1,4 @@
+import java.util.Arrays;
 import java.util.Stack;
 
 /**
@@ -94,8 +95,12 @@ public class Board {
     }
 
     // does this board equal y?
-    public boolean equals(Object y) {
-        return false;
+    public boolean equals(Object x) {
+        if (x == this) return true;
+        if (x == null) return false;
+        if (x.getClass() != this.getClass()) return false;
+        Board that = (Board) x;
+        return Arrays.deepEquals(tiles, that.tiles);
     }
 
     // all neighboring boards
@@ -137,6 +142,13 @@ public class Board {
         // manhattan 11
         b = new Board(board);
         printTest(b);
+
+        StdOut.println(b.equals(b));
+        Board bb = new Board(board);
+        StdOut.println(b.equals(bb));
+        board = new int[][]{ {8,1,3}, {4,0,2}, {7,6,5}};
+        bb = new Board(board);
+        StdOut.println(!b.equals(bb));
     }
 
     private static void printTest(Board b) {
