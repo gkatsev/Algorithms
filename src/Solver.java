@@ -47,6 +47,8 @@ public class Solver {
             for (Board b : neighbors) {
                 if (node.previous != null && !b.equals(node.previous.board)) {
                    nodes.insert(new SearchNode(node.moves + 1, b, node));
+                } else if (node.previous == null) {
+                    nodes.insert(new SearchNode(node.moves + 1, b, node));
                 }
             }
         }

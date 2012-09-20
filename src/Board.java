@@ -68,7 +68,7 @@ public class Board {
     // a board obtained by exchanging two adjacent blocks in the same row
     public Board twin() {
         if (twin == null) {
-            int[][] twinTiles = tiles.clone();
+            int[][] twinTiles = copyArray(tiles);
             int i = 0;
             int j1 = 0;
             int j2 = 1;
