@@ -9,8 +9,8 @@ public class Solver {
     private Board initial;
     private Board twin;
     private SearchNode solution;
-    MinPQ<SearchNode> minNodes;
-    MinPQ<SearchNode> minTwins;
+    private MinPQ<SearchNode> minNodes;
+    private MinPQ<SearchNode> minTwins;
 
     // find a solution to the initial board (using the A* algorithm)
     public Solver(Board initial) {
@@ -31,6 +31,10 @@ public class Solver {
             if (iterate(true)) break;
         }
 
+    }
+
+    private boolean isDuplicate(Board b, SearchNode node) {
+        return node.previous != null && (!b.equals(node.previous.board) || isDuplicate(b, node.previous));
     }
 
     private boolean iterate(boolean twins) {
@@ -96,6 +100,7 @@ public class Solver {
             StdOut.println("No solution possible");
         } else {
             StdOut.println("Minimum number of moves = " + solver.moves());
+            StdOut.println(initial.toString());
             for (Board board : solver.solution()) {
                 StdOut.println(board);
             }

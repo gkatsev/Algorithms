@@ -49,9 +49,9 @@ public class Board {
             for (int j = 0; j < N; j++) {
                 int tile = tiles[i][j];
                 int pos = N * i + j + 1;
-                if (tile != 0 && tile != pos) {
-                    int xi = mod(tile, N) - 1;
-                    int xj = mod(xi, N);
+                if (tile != 0) {
+                    int xi = tile / N - (tile % N == 0 ? 1 : 0);
+                    int xj = mod(tile%N-1, N);
                     val += Math.abs(xi - i);
                     val += Math.abs(xj - j);
                 }
@@ -77,7 +77,7 @@ public class Board {
                 if(twinTiles[i][j1] == 0 || twinTiles[i][j2] == 0) {
                     j1++;
                     j2++;
-                    if (j2 == 3) {
+                    if (j2 == N) {
                         i++;
                         j1 = 0;
                         j2 = 1;
@@ -153,7 +153,7 @@ public class Board {
         // down
         oi = zi + 1;
         oj = zj;
-        if (oi < 3) {
+        if (oi < N) {
             exch(tilesClone, zi, zj, oi, oj);
             neighbors.push(new Board(tilesClone));
             exch(tilesClone, oi, oj, zi, zj);
@@ -171,7 +171,7 @@ public class Board {
         // right
         oi = zi;
         oj = zj + 1;
-        if (oj < 3) {
+        if (oj < N) {
             exch(tilesClone, zi, zj, oi, oj);
             neighbors.push(new Board(tilesClone));
             exch(tilesClone, oi, oj, zi, zj);

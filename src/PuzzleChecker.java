@@ -44,6 +44,8 @@ public class PuzzleChecker {
 
             // solve the slider puzzle
             Board initial = new Board(tiles);
+//            System.out.println(initial.toString());
+            //System.out.println(filename + ": " + initial.manhattan());
             Solver solver = new Solver(initial);
             System.out.println(filename + ": " + solver.moves());
         }
