@@ -30,17 +30,19 @@ public class Solver {
             if (iterate(false)) break;
             if (iterate(true)) break;
         }
-
     }
 
     private boolean isDuplicate(Board b, SearchNode node) {
-        return node.previous != null && (!b.equals(node.previous.board) || isDuplicate(b, node.previous));
+        if (node == null) return false;
+        else if (b.equals(node.board)) return true;
+        else return isDuplicate(b, node.previous);
     }
 
     private boolean iterate(boolean twins) {
         MinPQ<SearchNode> nodes = twins ? minTwins : minNodes;
         SearchNode node;
         node = nodes.delMin();
+        if (node.moves > 50) return true;
         if (node.board.isGoal()) {
             if (!twins) {
                 solution = node;
@@ -49,10 +51,10 @@ public class Solver {
         } else {
             Iterable<Board> neighbors = node.board.neighbors();
             for (Board b : neighbors) {
-                if (node.previous != null && !b.equals(node.previous.board)) {
+                if (isDuplicate(b, node.previous)) {
+                    continue;
+                } else {
                    nodes.insert(new SearchNode(node.moves + 1, b, node));
-                } else if (node.previous == null) {
-                    nodes.insert(new SearchNode(node.moves + 1, b, node));
                 }
             }
         }
@@ -120,7 +122,9 @@ public class Solver {
 
         @Override
         public int compareTo(SearchNode that) {
-            return this.board.manhattan() - that.board.manhattan();
+            int man = this.board.manhattan() - that.board.manhattan();
+            if (man != 0) return man;
+            return this.moves - that.moves;
         }
     }
 }

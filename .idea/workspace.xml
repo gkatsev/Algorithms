@@ -88,8 +88,8 @@
       <property name="field_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByClasses" value="true" />
       <property name="exception_breakpoints_viewId" value="TABLE" />
-      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="field_breakpoints_viewId" value="TABLE" />
+      <property name="exception_breakpoints_groupByClasses" value="true" />
       <property name="method_breakpoints_groupByMethods" value="false" />
     </ui_properties>
   </component>
@@ -101,27 +101,29 @@
       <file leaf-file-name="PuzzleChecker.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PuzzleChecker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="13" selection-start="1443" selection-end="1443" vertical-scroll-proportion="0.0">
+            <state line="20" column="0" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Board.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Board.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Board.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="0" selection-start="2262" selection-end="2262" vertical-scroll-proportion="0.98129815">
-              <folding />
+            <state line="161" column="14" selection-start="4423" selection-end="4423" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#3995#4002#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solver.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Solver.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Solver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="79" column="0" selection-start="2426" selection-end="2426" vertical-scroll-proportion="0.0">
+            <state line="44" column="26" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.47215497">
               <folding>
-                <element signature="e#2290#2297#0" expanded="true" />
+                <element signature="e#2269#2276#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,8 +157,8 @@
         <option value="$PROJECT_DIR$/src/PercolationStats.java" />
         <option value="$PROJECT_DIR$/src/Percolation.java" />
         <option value="$PROJECT_DIR$/src/TimingExercise.java" />
-        <option value="$PROJECT_DIR$/src/Board.java" />
         <option value="$PROJECT_DIR$/src/PuzzleChecker.java" />
+        <option value="$PROJECT_DIR$/src/Board.java" />
         <option value="$PROJECT_DIR$/src/Solver.java" />
       </list>
     </option>
@@ -165,10 +167,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
-    <option name="y" value="-8" />
-    <option name="width" value="1874" />
-    <option name="height" value="1096" />
+    <option name="x" value="53" />
+    <option name="y" value="25" />
+    <option name="width" value="1224" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -258,12 +260,12 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -294,6 +296,24 @@
         <option name="Maven.BeforeRunTask" enabled="false" />
       </method>
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method>
+        <option name="AntTarget" enabled="false" />
+        <option name="BuildArtifacts" enabled="false" />
+        <option name="Make" enabled="true" />
+        <option name="Maven.BeforeRunTask" enabled="false" />
+      </method>
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -319,24 +339,6 @@
       <envs />
       <properties />
       <listeners />
-      <method>
-        <option name="AntTarget" enabled="false" />
-        <option name="BuildArtifacts" enabled="false" />
-        <option name="Make" enabled="true" />
-        <option name="Maven.BeforeRunTask" enabled="false" />
-      </method>
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method>
         <option name="AntTarget" enabled="false" />
         <option name="BuildArtifacts" enabled="false" />
@@ -432,8 +434,8 @@
     </configuration>
     <configuration default="false" name="Solver" type="Application" factoryName="Application" editBeforeRun="true">
       <option name="MAIN_CLASS_NAME" value="Solver" />
-      <option name="VM_PARAMETERS" value="-Xmx1600m" />
-      <option name="PROGRAM_PARAMETERS" value="puzzle3x3-unsolvable.txt" />
+      <option name="VM_PARAMETERS" value="-Xmx2500m" />
+      <option name="PROGRAM_PARAMETERS" value="puzzle15.txt" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/src/8puzzle" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -455,7 +457,7 @@
     <configuration default="false" name="PuzzleChecker" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="PuzzleChecker" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="puzzle*.txt" />
+      <option name="PROGRAM_PARAMETERS" value="puzzle00.txt puzzle01.txt puzzle02.txt puzzle03.txt puzzle04.txt puzzle05.txt puzzle06.txt puzzle07.txt puzzle08.txt puzzle09.txt puzzle10.txt puzzle11.txt puzzle12.txt puzzle13.txt puzzle15.txt puzzle16.txt puzzle17.txt puzzle18.txt puzzle19.txt puzzle20.txt puzzle21.txt puzzle22.txt puzzle23.txt puzzle24.txt puzzle25.txt puzzle26.txt puzzle27.txt puzzle28.txt puzzle29.txt puzzle30.txt puzzle31.txt puzzle32.txt puzzle33.txt puzzle34.txt puzzle35.txt puzzle36.txt puzzle37.txt puzzle38.txt puzzle39.txt puzzle3x3-unsolvable.txt puzzle40.txt puzzle41.txt puzzle42.txt puzzle43.txt puzzle44.txt puzzle45.txt puzzle4x4-hard1.txt puzzle4x4-hard2.txt " />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/src/8puzzle" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -541,7 +543,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
+    <frame x="53" y="25" width="1224" height="773" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.48687553" order="7" side_tool="false" content_ui="tabs" />
@@ -552,14 +554,14 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.50719726" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14704256" sideWeight="0.23290598" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.48348856" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.4970364" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Analysis" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15201768" sideWeight="0.5854701" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1632653" sideWeight="0.40030676" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32946378" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39911553" sideWeight="0.6712329" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15201768" sideWeight="0.4070513" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32371795" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1632653" sideWeight="0.2638037" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32515338" sideWeight="0.9957663" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -645,29 +647,35 @@
         <state line="1" column="32" selection-start="109" selection-end="109" vertical-scroll-proportion="0.01870187" />
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/algs4.jar!/MinPQ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="0" selection-start="3993" selection-end="3993" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PuzzleChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="13" selection-start="1443" selection-end="1443" vertical-scroll-proportion="0.0" />
+        <state line="20" column="0" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Solver.java">
+    <entry file="jar://$PROJECT_DIR$/lib/algs4.jar!/MinPQ.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="0" selection-start="2426" selection-end="2426" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2290#2297#0" expanded="true" />
-          </folding>
+        <state line="132" column="0" selection-start="4182" selection-end="4182" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Board.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="0" selection-start="2262" selection-end="2262" vertical-scroll-proportion="0.98129815">
-          <folding />
+        <state line="161" column="14" selection-start="4423" selection-end="4423" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#3995#4002#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Solver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="26" selection-start="1291" selection-end="1291" vertical-scroll-proportion="0.47215497">
+          <folding>
+            <element signature="e#2269#2276#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

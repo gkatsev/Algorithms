@@ -10,12 +10,17 @@ public class Board {
     private int N;
     private int[][] tiles;
     private Board twin;
+    private int manhattan;
+    private Iterable<Board> neighbors;
 
     // construct a board from an N-by-N array of blocks
     // (where blocks[i][j] = block in row i, column j)
     public Board(int[][] blocks) {
         tiles = copyArray(blocks);
         N = blocks.length;
+        manhattan = -1;
+        neighbors = null;
+        manhattan();
     }
 
     // board dimension N
@@ -44,6 +49,7 @@ public class Board {
 
     // sum of Manhattan distances between blocks and goal
     public int manhattan() {
+        if (manhattan != -1) return manhattan;
         int val = 0;
         for (int i = 0; i < N; i++) {
             for (int j = 0; j < N; j++) {
@@ -57,6 +63,7 @@ public class Board {
                 }
             }
         }
+        manhattan = val;
         return val;
     }
 
@@ -133,6 +140,8 @@ public class Board {
 
     // all neighboring boards
     public Iterable<Board> neighbors() {
+        if (this.neighbors != null) return neighbors;
+
         Stack<Board> neighbors = new Stack<Board>();
         int[][] tilesClone = copyArray(tiles);
         int[] zeroPos = findZero();
@@ -177,6 +186,7 @@ public class Board {
             exch(tilesClone, oi, oj, zi, zj);
         }
 
+        this.neighbors = neighbors;
         return neighbors;
     }
 
