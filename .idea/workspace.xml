@@ -164,10 +164,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
-    <option name="y" value="-8" />
-    <option name="width" value="1874" />
-    <option name="height" value="1096" />
+    <option name="x" value="53" />
+    <option name="y" value="25" />
+    <option name="width" value="1224" />
+    <option name="height" value="773" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -454,7 +454,7 @@
     <configuration default="false" name="PuzzleChecker" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="PuzzleChecker" />
       <option name="VM_PARAMETERS" value="" />
-      <option name="PROGRAM_PARAMETERS" value="puzzle*.txt" />
+      <option name="PROGRAM_PARAMETERS" value="puzzle00.txt puzzle01.txt puzzle02.txt puzzle03.txt puzzle04.txt puzzle05.txt puzzle06.txt puzzle07.txt puzzle08.txt puzzle09.txt puzzle10.txt puzzle11.txt puzzle12.txt puzzle13.txt puzzle15.txt puzzle16.txt puzzle17.txt puzzle18.txt puzzle19.txt puzzle20.txt puzzle21.txt puzzle22.txt puzzle23.txt puzzle24.txt puzzle25.txt puzzle26.txt puzzle27.txt puzzle28.txt puzzle29.txt puzzle30.txt puzzle31.txt puzzle32.txt puzzle33.txt puzzle34.txt puzzle35.txt puzzle36.txt puzzle37.txt puzzle38.txt puzzle39.txt puzzle3x3-unsolvable.txt puzzle40.txt puzzle41.txt puzzle42.txt puzzle43.txt puzzle44.txt puzzle45.txt puzzle4x4-hard1.txt puzzle4x4-hard2.txt " />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$/src/8puzzle" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
@@ -540,7 +540,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
+    <frame x="53" y="25" width="1224" height="773" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.48687553" order="7" side_tool="false" content_ui="tabs" />
@@ -551,7 +551,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.50719726" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14704256" sideWeight="0.23290598" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32876712" sideWeight="0.48348856" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32668713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32799146" sideWeight="0.4970364" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Analysis" active="false" anchor="bottom" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32905984" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15201768" sideWeight="0.3974359" order="1" side_tool="true" content_ui="tabs" />
@@ -644,12 +644,14 @@
         <state line="1" column="32" selection-start="109" selection-end="109" vertical-scroll-proportion="0.01870187" />
       </provider>
     </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/algs4.jar!/MinPQ.java">
+    <entry file="file://$PROJECT_DIR$/src/PuzzleChecker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="0" selection-start="3993" selection-end="3993" vertical-scroll-proportion="0.0" />
+        <state line="20" column="0" selection-start="626" selection-end="626" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PuzzleChecker.java">
+    <entry file="jar://$PROJECT_DIR$/lib/algs4.jar!/MinPQ.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="34" column="13" selection-start="961" selection-end="961" vertical-scroll-proportion="0.0">
           <folding />
