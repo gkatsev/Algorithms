@@ -71,12 +71,14 @@ public class Solver {
 
     // sequence of boards in a shortest solution; null if no solution
     public Iterable<Board> solution() {
+        if (solution == null) return null;
         SearchNode node = solution;
         Stack<Board> solution = new Stack<Board>();
         while (node.previous != null) {
             solution.add(0, node.board);
             node = node.previous;
         }
+        solution.add(0, initial);
         return solution;
     }
 
@@ -100,7 +102,6 @@ public class Solver {
             StdOut.println("No solution possible");
         } else {
             StdOut.println("Minimum number of moves = " + solver.moves());
-            StdOut.println(initial.toString());
             for (Board board : solver.solution()) {
                 StdOut.println(board);
             }
@@ -120,6 +121,8 @@ public class Solver {
 
         @Override
         public int compareTo(SearchNode that) {
+            int man = (this.moves + this.board.manhattan()) - (that.moves + that.board.manhattan());
+            if (man != 0) return man;
             return this.board.manhattan() - that.board.manhattan();
         }
     }
